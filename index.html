@@ -24,7 +24,7 @@
       <div class="hero">
         <p class="eyebrow">腕上物理骰子 · APPLE WATCH</p>
         <h1>把一个骰子盒，<br>戴在手腕上。</h1>
-        <p>轻轻倾斜、平移或转动手腕，让屏幕里的三维骰子随运动传感器数据滑动、碰撞与翻滚。</p>
+        <p>1.8 版带来圆角立体骰子与清晰的凹坑点数。轻轻倾斜、平移或转动手腕，让一至三个骰子滑动、碰撞与翻滚；转动表冠，还可以环视骰子盒。</p>
         <p class="meta">独立手表应用 · 无账户 · 无广告 · 运动数据留在设备内</p>
       </div>
       <section id="start" aria-labelledby="start-title">
@@ -32,7 +32,7 @@
         <div class="cards">
           <article class="card"><span class="step">01 / 打开</span><h3>先静放一会儿</h3><p>在 Apple Watch 上打开应用，让屏幕朝上，先观察骰子和传感器状态。</p></article>
           <article class="card"><span class="step">02 / 轻轻移动</span><h3>倾斜、平移或转腕</h3><p>用日常幅度移动手腕。倾斜改变重力方向，加速和转动也会影响骰子的运动。</p></article>
-          <article class="card"><span class="step">03 / 长按设置</span><h3>调整与查看状态</h3><p>长按屏幕打开设置，可调整显示区宽度、显示传感器诊断或修正屏幕坐标。</p></article>
+          <article class="card"><span class="step">03 / 长按设置</span><h3>调整与查看状态</h3><p>长按屏幕打开设置，可选择一至三个骰子，调整盒子尺寸、重力与回弹，查看诊断或试触感。设置会自动保存，点击“复原”可恢复默认值。</p></article>
         </div>
       </section>
       <section class="note">
@@ -44,12 +44,14 @@
         <h2 id="faq-title">常见问题</h2>
         <details open><summary>骰子不动，或者提示传感器不可用</summary><p>先确认应用处于前台。如果系统提示运动数据权限，请根据需要允许访问。长按打开设置，选择“重试传感器”或返回骰子。如果仍未恢复，可退出后重新打开应用。</p></details>
         <details><summary>运动数据中断或采样间隔过长</summary><p>应用会暂停仿真，避免继续使用过期的数据。长按打开设置后重试。反馈问题时，请附上提示文字、手表型号与 watchOS 版本。</p></details>
-        <details><summary>倾斜时骰子往相反方向移动</summary><p>默认方向会根据表冠位置适配。缓慢抬高手表右边，骰子应向左移动。如果方向相反，可长按打开设置，切换“屏幕坐标额外旋转 180°”后再检查。</p></details>
-        <details><summary>显示区宽度应该填多少？</summary><p>填写屏幕显示区域的实际宽度，而不是表壳标称尺寸。可在 28–42 mm 之间调整。这个值用于设置虚拟盒子的物理宽度；骰子边长为 9 mm，盒子深度为 20 mm。</p></details>
-        <details><summary>打开设置或离开应用后会继续采样吗？</summary><p>打开设置、应用不再处于活动状态或退出时，会停止运动采样并暂停仿真。返回前台并关闭设置后恢复。</p></details>
+        <details><summary>倾斜时骰子往相反方向移动</summary><p>应用自动读取 watchOS 的左右手与表冠方向设置。请先确认手表“设置 → 通用 → 方向”与实际佩戴一致，再缓慢抬高手表右边，骰子应向左移动。</p></details>
+        <details><summary>盒子尺寸如何调整？</summary><p>默认尺寸按手表显示区适配。宽度使用显示区域的实际宽度，而非表壳标称尺寸，可在 28–42 mm 内调整；盒深可在 18–70 mm 内调整。一至三个骰子的边长分别为 9、8、7.2 mm。</p></details>
+        <details><summary>如何投掷和环视骰子？</summary><p>双击骰子画面可施加一次投掷冲量；点“抛入”可从上方落入骰子。转动表冠可绕盒子观察，停转后视角会平滑回到默认位置。系统支持的双指互点也可触发“抛入”。</p></details>
+        <details><summary>为什么感觉不到碰撞触感？</summary><p>只有达到强度与节奏条件的撞击才会请求短促系统触感。长按进入设置，点“试触感”检查输出，再查看诊断里的撞击数与反馈数；同时检查系统触感设置。</p></details>
+        <details><summary>打开设置或离开应用后会继续采样吗？</summary><p>打开设置或真正进入后台时，应用停止采样并暂停仿真。短暂抬腕状态变化会继续处理；系统暗屏可能限制帧率和手势。返回前台后会清除旧采样间隔再恢复。</p></details>
         <details><summary>需要 iPhone、账户或网络吗？</summary><p>骰子互动在 Apple Watch 上独立运行，不要求应用账户，也不通过网络发送运动数据。应用的下载和安装由 Apple 的分发平台处理。</p></details>
-        <details><summary>我的设置会保存吗？</summary><p>显示区宽度、诊断开关和坐标修正开关保存在设备本地，再次打开应用时会读取这些设置。</p></details>
-        <details><summary>是否读取健康、位置或联系人信息？</summary><p>1.0 版本的骰子互动使用设备运动数据，不读取健康记录、位置、联系人、照片或麦克风数据。详细处理方式见<a href="privacy.html">隐私政策</a>。</p></details>
+        <details><summary>我的设置会保存吗？</summary><p>骰子数量、盒子尺寸、重力、回弹与诊断开关保存在设备本地，再次打开应用时会自动恢复。设置中的“复原”按钮可恢复默认配置。</p></details>
+        <details><summary>是否读取健康、位置或联系人信息？</summary><p>1.8 版本的骰子互动使用设备运动数据，不读取健康记录、位置、联系人、照片或麦克风数据。详细处理方式见<a href="privacy.html">隐私政策</a>。</p></details>
       </section>
       <section id="contact" class="card" hidden aria-labelledby="contact-title">
         <h2 id="contact-title">联系支持</h2>
